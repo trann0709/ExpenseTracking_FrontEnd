@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from '../utils/logo.svg'
+import logo from '../images/logo.svg'
 import Wrapper from '../wrappers/Logo'
 
 const Logo = () => {

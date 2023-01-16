@@ -1,14 +1,14 @@
-import Logo from './components/Logo'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { LandingPage, Error } from './pages/index'
 
 function App() {
   return (
-    <>
-      <Logo />
-      <h1>hello world</h1>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, ipsa?
-      </p>
-    </>
+    <Router>
+      <Routes>
+        <Route path='/' element={<LandingPage />} />
+        <Route path='*' element={<Error />} />
+      </Routes>
+    </Router>
   )
 }
 
