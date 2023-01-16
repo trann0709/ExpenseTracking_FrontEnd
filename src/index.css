@@ -46,10 +46,12 @@ html {
 
   /* rest of the variables */
   --spacing: 2px;
-  --radius: 0.5rem;
+  --radius: 0.25rem;
   --transition: all 0.3s linear;
   --fixed-width: 500px;
-  --max-width: 1170px;
+  --max-width: 1120px;
+  --nav-height: 6rem;
+  --fluid-width: 90vw;
 
   /* box shadow */
   --shadow-1: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
@@ -67,7 +69,7 @@ body {
   font-weight: 300;
   line-height: 1.75;
   color: var(--primary-500);
-  font-size: 1.05rem;
+  font-size: 1.15rem;
 }
 
 h1,
@@ -131,6 +133,11 @@ small,
   font-size: 0.8rem;
 }
 
+p {
+  margin-bottom: 2rem;
+  max-width: 40em;
+}
+
 a {
   text-decoration: none;
   letter-spacing: var(--spacing);
@@ -150,13 +157,19 @@ ul {
   padding: 0;
 }
 
+img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
 /* button */
 
 .btn {
-  padding: 0.5rem 1.25rem;
+  padding: 0.75rem 1.25rem;
   display: inline-block;
   background: var(--primary-500);
-  color: var(--grey-500);
+  color: var(--grey-200);
   border: transparent;
   letter-spacing: var(--spacing);
   border-radius: var(--radius);
@@ -165,12 +178,10 @@ ul {
   transition: var(--transition);
   text-transform: capitalize;
   text-align: center;
-  font-size: 1.25rem;
 }
 
 .btn:hover {
   background: var(--primary-700);
-  box-shadow: var(--shadow-3);
 }
 
 .section-center {
