@@ -150,12 +150,6 @@ ul {
   padding: 0;
 }
 
-.img {
-  width: 100%;
-  display: block;
-  object-fit: cover;
-}
-
 /* button */
 
 .btn {
