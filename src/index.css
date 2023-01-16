@@ -163,6 +163,22 @@ img {
   object-fit: cover;
 }
 
+.page {
+  min-height: calc(100vh - var(--nav-height));
+  display: grid;
+  align-items: center;
+  margin-top: -3rem;
+}
+
+nav {
+  height: var(--nav-height);
+  max-width: var(--max-width);
+  margin: 0 auto;
+  width: var(--fluid-width);
+  display: flex;
+  align-items: center;
+}
+
 /* button */
 
 .btn {

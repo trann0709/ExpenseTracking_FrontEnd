@@ -1,23 +1,10 @@
 import styled from 'styled-components'
 
 const Wrapper = styled.main`
-  nav {
-    height: var(--nav-height);
-    max-width: var(--max-width);
-    margin: 0 auto;
-    width: var(--fluid-width);
-    display: flex;
-    align-items: center;
+  p {
+    margin: 2rem auto;
   }
-  .page {
-    min-height: calc(100vh - var(--nav-height));
-    display: grid;
-    align-items: center;
-    margin-top: -3rem;
-    p {
-      margin: 2rem auto;
-    }
-  }
+
   .image-container {
     display: none;
   }
