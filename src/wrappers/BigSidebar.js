@@ -6,7 +6,8 @@ const Wrapper = styled.aside`
     display: block;
     .container {
       margin-top: -1rem;
-      background: var(--white);
+      /* background: var(--white); */
+      background: var(--primary-600);
       min-height: calc(100vh - 1rem);
       height: 100%;
       width: 250px;
@@ -22,9 +23,10 @@ const Wrapper = styled.aside`
       display: flex;
       align-items: center;
       padding: 1.25rem 0;
-      padding-left: 2rem;
+      padding-left: 1.75rem;
       text-transform: capitalize;
-      color: var(--primary-500);
+      /* color: var(--primary-500); */
+      color: var(--grey-500);
       transition: var(--transition);
       :hover {
         background: var(--grey-300);
@@ -39,9 +41,9 @@ const Wrapper = styled.aside`
     }
 
     .active {
-      color: var(--primary-900);
+      color: var(--white);
       font-weight: 500;
-      font-size: 1.4rem;
+      font-size: 1.57rem;
     }
   } ;
 `
