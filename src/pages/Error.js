@@ -1,6 +1,6 @@
 import React from 'react'
 import error from '../images/error.svg'
-import Logo from '../components/Logo'
+import { Logo } from '../components'
 import Wrapper from '../wrappers/ErrorPage'
 
 const Error = () => {
