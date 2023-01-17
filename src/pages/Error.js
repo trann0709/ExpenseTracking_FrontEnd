@@ -6,7 +6,7 @@ import Wrapper from '../wrappers/ErrorPage'
 const Error = () => {
   return (
     <Wrapper>
-      <nav>
+      <nav className='error-nav'>
         <Logo />
       </nav>
       <div className='section-center page error-page'>

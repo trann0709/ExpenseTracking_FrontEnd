@@ -45,7 +45,7 @@ html {
   --bodyFont: 'Hind', sans-serif;
 
   /* rest of the variables */
-  --spacing: 2px;
+  --spacing: 1.75px;
   --radius: 0.25rem;
   --transition: all 0.3s linear;
   --fixed-width: 500px;
@@ -172,9 +172,7 @@ img {
 
 nav {
   height: var(--nav-height);
-  max-width: var(--max-width);
   margin: 0 auto;
-  width: var(--fluid-width);
   display: flex;
   align-items: center;
 }

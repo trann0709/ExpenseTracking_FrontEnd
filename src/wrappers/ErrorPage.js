@@ -1,6 +1,10 @@
 import styled from 'styled-components'
 
 const Wrapper = styled.main`
+  .error-nav {
+    max-width: var(--max-width);
+    width: var(--fluid-width);
+  }
   .error-page {
     display: flex;
     justify-content: center;

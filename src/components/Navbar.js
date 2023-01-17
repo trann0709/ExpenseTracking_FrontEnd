@@ -1,10 +1,12 @@
-import React from 'react'
-import styled from 'styled-components'
+import React, { useState } from 'react'
 import { AiOutlineSetting, AiOutlineMenu } from 'react-icons/ai'
 import { useUserContext } from '../context/user_context'
+import Wrapper from '../wrappers/Navbar'
 
 const Navbar = () => {
   const { myUser } = useUserContext()
+  const [showLogout, setShowLogout] = useState(false)
+
   return (
     <Wrapper>
       <div className='nav-center'>
@@ -13,9 +15,18 @@ const Navbar = () => {
         </button>
         <h4>hello, {myUser}</h4>
         <div className='btn-container'>
-          <button type='button'>
+          <button
+            type='button'
+            className='setting'
+            onClick={() => setShowLogout(!showLogout)}
+          >
             <AiOutlineSetting />
           </button>
+          <div className={showLogout ? 'dropdown show-dropdown' : 'dropdown'}>
+            <button type='button' className='dropdown-btn'>
+              logout
+            </button>
+          </div>
         </div>
       </div>
     </Wrapper>
@@ -23,19 +34,3 @@ const Navbar = () => {
 }
 
 export default Navbar
-
-const Wrapper = styled.nav`
-  background: var(--primary-600);
-  height: var(--nav-height);
-  box-shadow: var(--shadow-2);
-  color: var(--grey-500);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: blue;
-  .nav-center {
-    display: flex;
-    align-items: center;
-    width: 90vw;
-  }
-`
