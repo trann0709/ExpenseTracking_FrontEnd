@@ -1,13 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
-import { AiOutlineMenu } from 'react-icons/ai'
 
 const SmallSidebar = () => {
-  return (
-    <Wrapper>
-      <AiOutlineMenu />
-    </Wrapper>
-  )
+  return <Wrapper>small sidebar</Wrapper>
 }
 
 export default SmallSidebar

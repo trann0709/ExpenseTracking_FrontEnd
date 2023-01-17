@@ -4,46 +4,56 @@ const Wrapper = styled.aside`
   display: none;
   @media (min-width: 1170px) {
     display: block;
+    box-shadow: var(--shadow-2);
     .container {
       margin-top: -1rem;
-      /* background: var(--white); */
       background: var(--primary-600);
       min-height: calc(100vh - 1rem);
       height: 100%;
       width: 250px;
-      box-shadow: var(--shadow-2);
+      /* margin-left: -250px; */
+      transition: var(--transition);
     }
+
+    /* .content {
+      position: sticky;
+      top: 0;
+    } */
+
+    /* .show-sidebar {
+      margin-left: 0;
+    } */
+
     .nav-links {
       display: flex;
       flex-direction: column;
-      margin-top: 2rem;
+      padding-top: 2rem;
     }
 
     .nav-link {
       display: flex;
       align-items: center;
-      padding: 1.25rem 0;
-      padding-left: 1.75rem;
+      padding: 1.2rem 0;
+      padding-left: 1.5rem;
       text-transform: capitalize;
-      /* color: var(--primary-500); */
       color: var(--grey-500);
       transition: var(--transition);
       :hover {
-        background: var(--grey-300);
-        color: var(--primary-700);
-        padding-left: 3rem;
+        background: var(--grey-400);
+        color: var(--primary-800);
+        padding-left: 2.5rem;
       }
     }
 
     .icon {
-      margin-right: 0.95rem;
+      margin-right: 1rem;
       font-size: 1.5rem;
     }
 
     .active {
       color: var(--white);
       font-weight: 500;
-      font-size: 1.57rem;
+      font-size: 1.55rem;
     }
   } ;
 `
