@@ -1,16 +1,18 @@
 import React, { useState } from 'react'
 import { AiOutlineSetting, AiOutlineMenu } from 'react-icons/ai'
+import { useExpenseContext } from '../context/expense_context'
 import { useUserContext } from '../context/user_context'
 import Wrapper from '../wrappers/Navbar'
 
 const Navbar = () => {
   const { myUser } = useUserContext()
   const [showLogout, setShowLogout] = useState(false)
+  const { toggleSidebar } = useExpenseContext()
 
   return (
     <Wrapper>
       <div className='nav-center'>
-        <button type='button' className='toggle-btn'>
+        <button type='button' className='toggle-btn' onClick={toggleSidebar}>
           <AiOutlineMenu />
         </button>
         <h4>hello, {myUser}</h4>

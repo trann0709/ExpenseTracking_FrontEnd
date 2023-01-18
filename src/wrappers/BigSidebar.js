@@ -11,7 +11,7 @@ const Wrapper = styled.aside`
       min-height: 100vh;
       height: 100%;
       width: 250px;
-      /* margin-left: -250px; */
+      margin-left: -250px;
       transition: var(--transition);
     }
 
@@ -20,9 +20,9 @@ const Wrapper = styled.aside`
       top: 0;
     } */
 
-    /* .show-sidebar {
+    .show-sidebar {
       margin-left: 0;
-    } */
+    }
 
     .nav-links {
       display: flex;

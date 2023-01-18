@@ -12,10 +12,10 @@ const Wrapper = styled.aside`
     opacity: 0;
     transition: var(--transition);
   }
-  /* .show-sidebar {
+  .show-sidebar {
     opacity: 1;
     z-index: 99;
-  } */
+  }
   .content {
     background: var(--grey-200);
     height: 70vh;
