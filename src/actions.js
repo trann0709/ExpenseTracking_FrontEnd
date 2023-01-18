@@ -1,1 +1,2 @@
 export const TOGGLE_SIDEBAR = 'TOGGLE_SIDEBAR'
+export const ADD_EXPENSE = 'ADD_EXPENSE'
