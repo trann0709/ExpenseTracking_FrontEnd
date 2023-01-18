@@ -1,14 +1,22 @@
 import React from 'react'
-import styled from 'styled-components'
+import { NavLinks, Logo } from '../components'
+import { AiOutlineClose } from 'react-icons/ai'
+import Wrapper from '../wrappers/SmallSidebar'
 
 const SmallSidebar = () => {
-  return <Wrapper>small sidebar</Wrapper>
+  return (
+    <Wrapper>
+      <div className='container show-sidebar'>
+        <div className='content'>
+          <button className='close-btn'>
+            <AiOutlineClose />
+          </button>
+          <Logo />
+          <NavLinks />
+        </div>
+      </div>
+    </Wrapper>
+  )
 }
 
 export default SmallSidebar
-
-const Wrapper = styled.aside`
-  @media (min-width: 1170px) {
-    display: none;
-  } ;
-`

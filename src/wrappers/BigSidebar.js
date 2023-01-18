@@ -8,7 +8,7 @@ const Wrapper = styled.aside`
     .container {
       margin-top: -1rem;
       background: var(--primary-600);
-      min-height: calc(100vh - 1rem);
+      min-height: 100vh;
       height: 100%;
       width: 250px;
       /* margin-left: -250px; */
