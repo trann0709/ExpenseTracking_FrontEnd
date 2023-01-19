@@ -8,6 +8,7 @@ const AddExpense = () => {
   const {
     addExpense,
     handleChange,
+    dateChange,
     isLoading,
     categories,
     payments,
@@ -19,7 +20,7 @@ const AddExpense = () => {
     isEditing,
   } = useExpenseContext()
 
-  const [startDate, setStartDate] = useState(new Date())
+  // const [startDate, setStartDate] = useState(new Date())
 
   return (
     <article className='form'>
@@ -36,8 +37,9 @@ const AddExpense = () => {
             Date
           </label>
           <DatePicker
-            selected={startDate}
-            onChange={(date) => setStartDate(date)}
+            selected={date}
+            onChange={(data) => dateChange(data)}
+            className='form-input'
           />
         </div>
 

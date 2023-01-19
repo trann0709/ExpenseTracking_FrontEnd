@@ -15,10 +15,10 @@ const Wrapper = styled.aside`
       transition: var(--transition);
     }
 
-    /* .content {
+    .content {
       position: sticky;
       top: 0;
-    } */
+    }
 
     .show-sidebar {
       margin-left: 0;

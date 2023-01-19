@@ -1,6 +1,11 @@
 import React, { useContext, useReducer } from 'react'
 import reducer from '../reducers/expense_reducer'
-import { ADD_EXPENSE, TOGGLE_SIDEBAR, HANDLE_CHANGE } from '../actions'
+import {
+  ADD_EXPENSE,
+  TOGGLE_SIDEBAR,
+  HANDLE_CHANGE,
+  DATE_CHANGE,
+} from '../actions'
 
 const initialState = {
   isSidebarOpen: false,
@@ -48,9 +53,13 @@ export const ExpenseProvider = ({ children }) => {
     dispatch({ type: HANDLE_CHANGE, payload: { name, value } })
   }
 
+  const dateChange = (selectedDate) => {
+    dispatch({ type: DATE_CHANGE, payload: selectedDate })
+  }
+
   return (
     <ExpenseContext.Provider
-      value={{ ...state, toggleSidebar, addExpense, handleChange }}
+      value={{ ...state, toggleSidebar, addExpense, handleChange, dateChange }}
     >
       {children}
     </ExpenseContext.Provider>
