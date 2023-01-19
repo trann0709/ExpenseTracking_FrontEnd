@@ -1,6 +1,6 @@
 import React, { useContext, useReducer } from 'react'
 import reducer from '../reducers/expense_reducer'
-import { ADD_EXPENSE, TOGGLE_SIDEBAR } from '../actions'
+import { ADD_EXPENSE, TOGGLE_SIDEBAR, HANDLE_CHANGE } from '../actions'
 
 const initialState = {
   isSidebarOpen: false,
@@ -36,12 +36,22 @@ export const ExpenseProvider = ({ children }) => {
     dispatch({ type: TOGGLE_SIDEBAR })
   }
 
-  const addExpense = () => {
+  const addExpense = (e) => {
+    e.preventDefault()
     dispatch({ type: ADD_EXPENSE })
+    // clear the form and add the new expense to DB
+  }
+
+  const handleChange = (e) => {
+    let name = e.target.name
+    let value = e.target.value
+    dispatch({ type: HANDLE_CHANGE, payload: { name, value } })
   }
 
   return (
-    <ExpenseContext.Provider value={{ ...state, toggleSidebar, addExpense }}>
+    <ExpenseContext.Provider
+      value={{ ...state, toggleSidebar, addExpense, handleChange }}
+    >
       {children}
     </ExpenseContext.Provider>
   )

@@ -242,6 +242,7 @@ button:disabled {
   border-radius: var(--radius);
   background: var(--background);
   border: 1px solid var(--grey-200);
+  text-transform: capitalize;
 }
 
 .form-input,

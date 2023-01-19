@@ -1,7 +1,7 @@
 import links from '../utils/links'
 import { NavLink } from 'react-router-dom'
 
-const NavLinks = () => {
+const NavLinks = ({ toggle }) => {
   return (
     <div className='nav-links'>
       {links.map((link) => {
@@ -13,6 +13,7 @@ const NavLinks = () => {
             className={({ isActive }) => {
               return isActive ? 'nav-link active' : 'nav-link'
             }}
+            onClick={toggle}
           >
             <span className='icon'>{icon}</span>
             {text}

@@ -14,7 +14,7 @@ const SmallSidebar = () => {
             <AiOutlineClose />
           </button>
           <Logo />
-          <NavLinks />
+          <NavLinks toggle={toggleSidebar} />
         </div>
       </div>
     </Wrapper>
