@@ -2,7 +2,6 @@ import { FormRow, FormRowSelect } from '../../components'
 import { useExpenseContext } from '../../context/expense_context'
 import DatePicker from 'react-datepicker'
 import 'react-datepicker/dist/react-datepicker.css'
-import { useEffect, useState } from 'react'
 
 const AddExpense = () => {
   const {
@@ -19,8 +18,6 @@ const AddExpense = () => {
     paymentType,
     isEditing,
   } = useExpenseContext()
-
-  // const [startDate, setStartDate] = useState(new Date())
 
   return (
     <article className='form'>
@@ -40,6 +37,8 @@ const AddExpense = () => {
             selected={date}
             onChange={(data) => dateChange(data)}
             className='form-input'
+            placeholderText='Please select a date'
+            withPortal
           />
         </div>
 
