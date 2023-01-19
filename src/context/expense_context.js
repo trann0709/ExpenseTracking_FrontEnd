@@ -5,6 +5,7 @@ import {
   TOGGLE_SIDEBAR,
   HANDLE_CHANGE,
   DATE_CHANGE,
+  CLEAR_FORM,
 } from '../actions'
 
 const initialState = {
@@ -57,9 +58,20 @@ export const ExpenseProvider = ({ children }) => {
     dispatch({ type: DATE_CHANGE, payload: selectedDate })
   }
 
+  const clearForm = () => {
+    dispatch({ type: CLEAR_FORM, payload: initialState })
+  }
+
   return (
     <ExpenseContext.Provider
-      value={{ ...state, toggleSidebar, addExpense, handleChange, dateChange }}
+      value={{
+        ...state,
+        toggleSidebar,
+        addExpense,
+        handleChange,
+        dateChange,
+        clearForm,
+      }}
     >
       {children}
     </ExpenseContext.Provider>

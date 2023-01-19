@@ -1,5 +1,6 @@
 import {
   ADD_EXPENSE,
+  CLEAR_FORM,
   DATE_CHANGE,
   HANDLE_CHANGE,
   TOGGLE_SIDEBAR,
@@ -19,6 +20,9 @@ const expense_reducer = (state, action) => {
     return { ...state, date: action.payload }
   }
 
+  if (action.type === CLEAR_FORM) {
+    return action.payload
+  }
   if (action.type === ADD_EXPENSE) {
     return
   }

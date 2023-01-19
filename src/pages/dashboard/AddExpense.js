@@ -5,6 +5,7 @@ import 'react-datepicker/dist/react-datepicker.css'
 
 const AddExpense = () => {
   const {
+    clearForm,
     addExpense,
     handleChange,
     dateChange,
@@ -64,7 +65,12 @@ const AddExpense = () => {
           <button type='button' className='btn' disabled={isLoading}>
             {isEditing ? 'update' : 'add'}
           </button>
-          <button type='button' className='btn clear-btn' disabled={isLoading}>
+          <button
+            type='button'
+            className='btn clear-btn'
+            disabled={isLoading}
+            onClick={clearForm}
+          >
             clear
           </button>
         </div>
