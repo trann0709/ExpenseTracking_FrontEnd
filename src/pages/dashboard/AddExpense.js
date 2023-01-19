@@ -37,8 +37,8 @@ const AddExpense = () => {
           <DatePicker
             selected={date}
             onChange={(data) => dateChange(data)}
-            className='form-input'
-            placeholderText='Please select a date'
+            className='form-input datepicker'
+            placeholderText='e.g. 01/01/2023'
             withPortal
           />
         </div>

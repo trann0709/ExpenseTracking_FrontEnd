@@ -245,6 +245,10 @@ button:disabled {
   text-transform: capitalize;
 }
 
+.datepicker {
+  text-transform: lowercase;
+}
+
 .form-input,
 .btn-block {
   height: 35px;

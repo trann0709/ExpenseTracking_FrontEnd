@@ -20,6 +20,9 @@ const FormRowSelect = ({
         onChange={handleChange}
         className='form-input'
       >
+        <option selected disabled value=''>
+          {name}
+        </option>
         {list.map((item, index) => {
           return (
             <option key={index} value={item}>
