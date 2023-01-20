@@ -21,7 +21,7 @@ const expense_reducer = (state, action) => {
   }
 
   if (action.type === CLEAR_FORM) {
-    return action.payload
+    return { ...action.payload, isSidebarOpen: state.isSidebarOpen }
   }
   if (action.type === ADD_EXPENSE) {
     return
