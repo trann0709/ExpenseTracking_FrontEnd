@@ -2,6 +2,7 @@ import { FormRow, FormRowSelect } from '../../components'
 import { useExpenseContext } from '../../context/expense_context'
 import DatePicker from 'react-datepicker'
 import 'react-datepicker/dist/react-datepicker.css'
+import Wrapper from '../../wrappers/AddExpense'
 
 const AddExpense = () => {
   const {
@@ -21,8 +22,8 @@ const AddExpense = () => {
   } = useExpenseContext()
 
   return (
-    <article className='form'>
-      <h2>{isEditing ? 'update expense' : 'add expense'}</h2>
+    <Wrapper className='form'>
+      <h3>{isEditing ? 'update expense' : 'add expense'}</h3>
       <form onSubmit={addExpense}>
         <FormRow
           type='text'
@@ -56,13 +57,14 @@ const AddExpense = () => {
           handleChange={handleChange}
         />
         <FormRowSelect
-          name='payment type'
+          name='paymentType'
+          labelText='payment type'
           value={paymentType}
           handleChange={handleChange}
           list={payments}
         />
         <div className='btn-container'>
-          <button type='button' className='btn' disabled={isLoading}>
+          <button type='button' className='btn add-btn' disabled={isLoading}>
             {isEditing ? 'update' : 'add'}
           </button>
           <button
@@ -75,7 +77,7 @@ const AddExpense = () => {
           </button>
         </div>
       </form>
-    </article>
+    </Wrapper>
   )
 }
 

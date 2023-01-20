@@ -46,7 +46,7 @@ html {
 
   /* rest of the variables */
   --spacing: 1.75px;
-  --radius: 0.25rem;
+  --radius: 0.75rem;
   --transition: all 0.3s linear;
   --fixed-width: 500px;
   --max-width: 1120px;
@@ -211,6 +211,7 @@ nav {
   border-radius: var(--radius);
   box-shadow: var(--shadow-2);
   margin: 3rem auto;
+  padding: 2rem;
 }
 
 button:disabled {
@@ -229,8 +230,8 @@ button:disabled {
 
 .form-label {
   display: block;
-  font-size: var(--smallText);
-  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+  margin-bottom: 0.1rem;
   text-transform: capitalize;
   letter-spacing: var(--spacing);
 }
@@ -239,10 +240,11 @@ button:disabled {
 .form-select {
   width: 100%;
   padding: 0.375rem 0.75rem;
-  border-radius: var(--radius);
-  background: var(--background);
-  border: 1px solid var(--grey-200);
+  border-radius: 0.25rem;
+  background: var(--grey-200);
+  border: 1px solid var(--primary-200);
   text-transform: capitalize;
+  font-size: 1.15rem;
 }
 
 .datepicker {
@@ -251,9 +253,9 @@ button:disabled {
 
 .form-input,
 .btn-block {
-  height: 35px;
+  height: 45px;
 }
 
 .form-row {
-  margin-bottom: 1rem;
+  margin: 1.5rem 0;
 }

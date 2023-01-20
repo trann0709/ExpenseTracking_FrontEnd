@@ -1,13 +1,6 @@
 import React from 'react'
 
-const FormRowSelect = ({
-  type,
-  name,
-  handleChange,
-  value,
-  labelText,
-  list,
-}) => {
+const FormRowSelect = ({ name, handleChange, value, labelText, list }) => {
   return (
     <div className='form-row'>
       <label htmlFor={name} className='form-label'>
@@ -21,7 +14,7 @@ const FormRowSelect = ({
         className='form-input'
       >
         <option selected disabled value=''>
-          {name}
+          {labelText || name}
         </option>
         {list.map((item, index) => {
           return (
