@@ -77,6 +77,7 @@ export const ExpenseProvider = ({ children }) => {
         handleChange,
         dateChange,
         clearForm,
+        editForm,
       }}
     >
       {children}
