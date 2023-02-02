@@ -6,6 +6,7 @@ import {
   HANDLE_CHANGE,
   DATE_CHANGE,
   CLEAR_FORM,
+  EDIT_FORM,
 } from '../actions'
 
 const initialState = {
@@ -60,6 +61,11 @@ export const ExpenseProvider = ({ children }) => {
 
   const clearForm = () => {
     dispatch({ type: CLEAR_FORM, payload: initialState })
+  }
+
+  const editForm = () => {
+    // pass in id?
+    dispatch({ type: EDIT_FORM })
   }
 
   return (

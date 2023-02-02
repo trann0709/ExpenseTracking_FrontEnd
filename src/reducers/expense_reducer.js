@@ -4,6 +4,7 @@ import {
   DATE_CHANGE,
   HANDLE_CHANGE,
   TOGGLE_SIDEBAR,
+  EDIT_FORM,
 } from '../actions'
 
 const expense_reducer = (state, action) => {
@@ -22,6 +23,10 @@ const expense_reducer = (state, action) => {
 
   if (action.type === CLEAR_FORM) {
     return { ...action.payload, isSidebarOpen: state.isSidebarOpen }
+  }
+
+  if (action.type === EDIT_FORM) {
+    return
   }
   if (action.type === ADD_EXPENSE) {
     return
